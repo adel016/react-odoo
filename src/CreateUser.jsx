@@ -33,49 +33,72 @@ const CreateUser = () => {
   };
 
   return (
-    <div style={{ padding: "2rem" }}>
-      <h2 className="text-green-400">Créer un Utilisateur</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Nom :</label>
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <br />
+    <div className="w-full max-w-md bg-white shadow-md rounded-xl p-6">
+      <h2 className="text-xl font-bold text-green-600 mb-6 text-center">
+        Créer un Utilisateur
+      </h2>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Nom :
+          </label>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+          />
+        </div>
 
-        <label>Login :</label>
-        <input
-          type="text"
-          name="login"
-          value={formData.login}
-          onChange={handleChange}
-          required
-        />
-        <br />
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Login :
+          </label>
+          <input
+            type="text"
+            name="login"
+            value={formData.login}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+          />
+        </div>
 
-        <label>Mot de passe :</label>
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-        <br />
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Mot de passe :
+          </label>
+          <input
+            type="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+          />
+        </div>
 
-        <label>Groupes (IDs séparés par virgule) :</label>
-        <input
-          type="text"
-          name="groups"
-          value={formData.groups}
-          onChange={handleChange}
-        />
-        <br />
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Groupes (IDs séparés par virgule) :
+          </label>
+          <input
+            type="text"
+            name="groups"
+            value={formData.groups}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+          />
+        </div>
 
-        <button type="submit">Créer</button>
+        <button
+          type="submit"
+          className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-200"
+        >
+          Créer
+        </button>
       </form>
     </div>
   );
