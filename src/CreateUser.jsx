@@ -34,19 +34,46 @@ const CreateUser = () => {
 
   return (
     <div style={{ padding: "2rem" }}>
-      <h2 className="text-red-500">Créer un Utilisateur</h2>
+      <h2 className="text-green-400">Créer un Utilisateur</h2>
       <form onSubmit={handleSubmit}>
         <label>Nom :</label>
-        <input type="text" name="name" value={formData.name} onChange={handleChange} required /><br />
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <br />
 
         <label>Login :</label>
-        <input type="text" name="login" value={formData.login} onChange={handleChange} required /><br />
+        <input
+          type="text"
+          name="login"
+          value={formData.login}
+          onChange={handleChange}
+          required
+        />
+        <br />
 
         <label>Mot de passe :</label>
-        <input type="password" name="password" value={formData.password} onChange={handleChange} required /><br />
+        <input
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+          required
+        />
+        <br />
 
         <label>Groupes (IDs séparés par virgule) :</label>
-        <input type="text" name="groups" value={formData.groups} onChange={handleChange} /><br />
+        <input
+          type="text"
+          name="groups"
+          value={formData.groups}
+          onChange={handleChange}
+        />
+        <br />
 
         <button type="submit">Créer</button>
       </form>

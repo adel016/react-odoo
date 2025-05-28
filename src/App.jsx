@@ -4,7 +4,9 @@ import CreateUser from "./CreateUser";
 function App() {
   return (
     <div>
-      <h1 style={{ textAlign: "center", padding: "1rem" }}>🧑‍💻 Gestion des Utilisateurs Odoo</h1>
+      <h1 style={{ textAlign: "center", padding: "1rem" }}>
+        🧑‍💻 Gestion des Utilisateurs Odoo
+      </h1>
       <CreateUser />
     </div>
   );
